@@ -11,11 +11,10 @@ resource "aws_s3_bucket" "access_log_bucket" {
 
 }
 
-resource "aws_s3_bucket_acl" "access_log_bucket" {
-  bucket = aws_s3_bucket.access_log_bucket.id
-
-  acl = "log-delivery-write"
-}
+#resource "aws_s3_bucket_acl" "access_log_bucket" {
+#  bucket = aws_s3_bucket.access_log_bucket.id
+#  acl = "log-delivery-write"
+#}
 
 
 resource "aws_s3_bucket_versioning" "access_log_bucket" {
